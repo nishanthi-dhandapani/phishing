@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday</title> 
+        <style>
+            body {
+                background: linear-gradient(135deg, #d879fd, #d784e7, #eb95d2);
+                text-align: center;
+                font-family: 'Segoe UI', sans-serif;
+                padding-top: 40px;
+            }
+
+            h1 {
+                color: #48fa60;
+                font-size: 42px;
+                animation: glow 2s infinite alternate;
+            }
+
+            h2 {
+                color: hwb(241 0% 0% / 0.863);
+                font-size: 32px;
+                margin-top: 10px;
+                animation: slideIn 1s ease-in;
+            }
+
+            p {
+                color: hsl(71, 92%, 52%);
+                font-size: 20px;
+                background-color: hsla(22, 100%, 51%, 0.932);
+                display: inline-block;
+                padding: 10px 20px;
+                border-radius: 20px;
+                margin-top: 20px;
+            }
+
+            img {
+                display: block;
+                margin: 30px auto;
+                width: 300px;
+            
+            }
+
+            footer {
+                color: hsl(19, 89%, 48%);
+                font-size: 20px;
+                animation: glow 2s infinite alternate;
+                margin-top: 30px;
+            }
+
+            .btn {
+                padding: 12px 30px;
+                font-size: 18px;
+                border: none;
+                border-radius: 25px;
+                margin: 15px;
+                cursor: pointer;
+                transition: transform 0.2s, background-color 0.3s;
+            }
+
+            .yes {
+                background-color: #28a745;
+                color: white;
+            }
+
+            .no {
+                background-color: #dc3545;
+                color: white;
+            }
+
+            .btn:hover {
+                transform: scale(1.1);
+            }
+
+            @keyframes glow {
+                from { text-shadow: 0 0 10px #ff66b2; }
+                to { text-shadow: 0 0 25px #ff0066; }
+            }
+
+            @keyframes slideIn {
+                from { transform: translateX(-100px); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+
+            @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-20px); }
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Advance Happy Birthday</h1>
+        <h2>Vaazhthukkal Vaazhthukkal</h2>
+        <p>"Naama Sandhoshama irundhu mathavangalayum sandhoshama vachupom"</p>
+
+        <img src="data:image/gif;base64,....yourbase64data..." alt="Birthday gif" width="300">
+
+        <!-- MAIN BUTTONS -->
+        <div>
+            <button class="btn yes" onclick="showTreat()">Treat 😄</button>
+            <button class="btn no" onclick="showNoTreat()">No Treat 😢</button>
+        </div>
+
+        <!-- SUB BUTTONS WILL APPEAR HERE -->
+        <div id="response"></div>
+
+        <footer>Ippadiku ungal anbulla NiNi</footer>
+
+        <!-- JAVASCRIPT -->
+        <script>
+            function showTreat() {
+                document.getElementById("response").innerHTML = `
+                    <h3> aiyaa jollii enakku 😋</h3>
+                
+                `;
+            }
+
+            function showNoTreat() {
+                document.getElementById("response").innerHTML = `
+                    <h3>poda bundaa 😔</h3>
+                
+                `;
+            }
+        </script>
+    </body>
+</html>
